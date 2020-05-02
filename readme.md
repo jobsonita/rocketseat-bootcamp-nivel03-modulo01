@@ -1,4 +1,4 @@
-<p align="center"><img alt="Logotipo do Projeto" title="Back-end em Node" src=".github/logo.svg" width="200px" /></p>
+<p align="center"><img alt="Logotipo do Projeto" title="Back-end em Node" src=".github/logo.png" width="200px" /></p>
 
 # Front-end em ReactJS
 

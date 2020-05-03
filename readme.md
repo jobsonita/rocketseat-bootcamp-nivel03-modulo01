@@ -8,7 +8,7 @@ Baseado nas aulas do curso [GoStack](https://rocketseat.com.br/gostack) (turma 1
 
 ## Sobre este projeto
 
-Este projeto demonstra as configurações básicas de um front-end em ReactJS usando as bibliotecas react e typescript.
+Este projeto demonstra as configurações básicas de um front-end em ReactJS usando as bibliotecas react, typescript e styled-components.
 
 Para maiores detalhes sobre o passo-a-passo da configuração do projeto, utilize a seção "Comandos utilizados na construção do projeto" deste readme em conjunto com o detalhamento dos [commits](https://github.com/jobsonita/rocketseat-bootcamp-nivel03-modulo01/commits/master) deste repositório.
 
@@ -21,7 +21,8 @@ Para maiores detalhes sobre o passo-a-passo da configuração do projeto, utiliz
 - react
 - typescript
 - eslint + prettier (padronização de código)
-- react-router-dom
+- react-router-dom (roteamento de páginas)
+- styled-components (estilização de componentes)
 - [VS Code](https://code.visualstudio.com) (editor de código preferido)
 
 ## Instalação e execução
@@ -105,4 +106,11 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 ```
 yarn add react-router-dom
 yarn add @types/react-router-dom -D
+```
+
+#### Aula 02
+
+```
+yarn add styled-components
+yarn add @types/styled-components -D
 ```

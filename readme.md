@@ -114,3 +114,10 @@ yarn add @types/react-router-dom -D
 yarn add styled-components
 yarn add @types/styled-components -D
 ```
+
+#### Aula 03
+
+```
+yarn add polished
+yarn add react-icons
+```

@@ -20,6 +20,7 @@ Para maiores detalhes sobre o passo-a-passo da configuração do projeto, utiliz
 
 - react
 - typescript
+- eslint + prettier (padronização de código)
 - [VS Code](https://code.visualstudio.com) (editor de código preferido)
 
 ## Instalação e execução
@@ -88,4 +89,10 @@ yarn add -D eslint-config-standard eslint-config-standard-react @typescript-esli
 
 ```
 yarn add eslint-import-resolver-typescript -D
+```
+
+#### Aula 04
+
+```
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 ```

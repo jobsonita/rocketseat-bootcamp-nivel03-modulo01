@@ -21,6 +21,7 @@ Para maiores detalhes sobre o passo-a-passo da configuração do projeto, utiliz
 - react
 - typescript
 - eslint + prettier (padronização de código)
+- react-router-dom
 - [VS Code](https://code.visualstudio.com) (editor de código preferido)
 
 ## Instalação e execução
@@ -95,4 +96,13 @@ yarn add eslint-import-resolver-typescript -D
 
 ```
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+```
+
+### Sessão 02
+
+#### Aula 01
+
+```
+yarn add react-router-dom
+yarn add @types/react-router-dom -D
 ```

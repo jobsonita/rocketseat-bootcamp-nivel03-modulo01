@@ -51,3 +51,41 @@ yarn create react-app project_name --template=typescript
 cd project_name
 yarn start
 ```
+
+#### Aula 03
+
+```
+yarn add eslint -D
+yarn eslint --init
+```
+
+Configurações do eslint:
+
+```
+? How would you like to use ESLint?
+> To check syntax, find problems, and enforce code style
+? What type of modules does your project use?
+> JavaScript modules (import/export)
+? Which framework does your project use?
+> React
+? Does your project use TypeScript?
+> y
+? Where does your code run?
+* Browser
+? How would you like to define a style for your project?
+> Use a popular style guide
+? Which style guide do you want to follow?
+> Standard: https://github.com/standard/standard
+? What format do you want your config file to be in?
+> JSON
+? Would you like to install them now with npm?
+> n
+```
+
+```
+yarn add -D eslint-config-standard eslint-config-standard-react @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-node eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y
+```
+
+```
+yarn add eslint-import-resolver-typescript -D
+```

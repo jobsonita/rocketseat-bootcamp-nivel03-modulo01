@@ -1,16 +1,20 @@
-<p align="center"><img alt="Logotipo do Projeto" title="Back-end em Node" src=".github/logo.png" width="400px" /></p>
+<p align="center"><img alt="Logotipo do Projeto" title="Front-end em React" src=".github/logo.png" width="400px" /></p>
 
-# Front-end em ReactJS
+# Front-end em ReactJS - "Github Explorer"
 
 <p align="center">Autor: Jobson Gilberto Barros Amorim &lt;jobsonita@gmail.com&gt;</p>
 
 Baseado nas aulas do curso [GoStack](https://rocketseat.com.br/gostack) (turma 11) da Rocketseat.
+
+<p align="center"><img alt="Github Explorer demo" title="Github Explorer" src=".github/demo.gif" width="600px" /></p>
 
 ## Sobre este projeto
 
 Este projeto demonstra as configurações básicas de um front-end em ReactJS usando as bibliotecas react, typescript e styled-components.
 
 Para maiores detalhes sobre o passo-a-passo da configuração do projeto, utilize a seção "Comandos utilizados na construção do projeto" deste readme em conjunto com o detalhamento dos [commits](https://github.com/jobsonita/rocketseat-bootcamp-nivel03-modulo01/commits/master) deste repositório.
+
+Este projeto faz requisições à api pública do github. Atualmente, há um limite de [60 requisições por hora](https://developer.github.com/v3/#rate-limiting), em outras palavras, 60 pesquisas por hora na página principal ou 30 carregamentos da página de detalhes de repositório. Certifique-se de respeitar esse limite.
 
 ## Dependências Globais
 

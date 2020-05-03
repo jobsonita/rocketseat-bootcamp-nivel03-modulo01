@@ -121,3 +121,9 @@ yarn add @types/styled-components -D
 yarn add polished
 yarn add react-icons
 ```
+
+#### Aula 04
+
+```
+yarn add axios
+```

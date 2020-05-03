@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 
 import { FiChevronRight } from 'react-icons/fi'
 
@@ -17,30 +17,53 @@ interface Repository {
   }
 }
 
-const repoFormat = /^[^/]+\/[^/]+$/
+const searchFormat = /^[^/]+\/[^/]+$/
+
+const repoStorage = '@GithubExplorer:repositories'
+
+const saveRepositories = (repositories: Repository[]): void => {
+  localStorage.setItem(repoStorage, JSON.stringify(repositories))
+}
+
+const loadRepositories = (): Repository[] => {
+  const storedRepositories = localStorage.getItem(repoStorage)
+
+  if (!storedRepositories) return []
+
+  try {
+    return JSON.parse(storedRepositories)
+  } catch (error) {
+    return []
+  }
+}
 
 const Dashboard: React.FC = () => {
-  const [newRepo, setNewRepo] = useState('')
+  const [repoSearch, setRepoSearch] = useState('')
   const [inputError, setInputError] = useState('')
-  const [repositories, setRepositories] = useState<Repository[]>([])
 
-  async function handleAddRepository(
+  const [repositories, setRepositories] = useState<Repository[]>(
+    loadRepositories()
+  )
+
+  useEffect(() => saveRepositories(repositories), [repositories])
+
+  const handleAddRepository = async (
     event: FormEvent<HTMLFormElement>
-  ): Promise<void> {
+  ): Promise<void> => {
     event.preventDefault()
 
-    if (!repoFormat.test(newRepo)) {
+    if (!searchFormat.test(repoSearch)) {
       setInputError('Digite o repositório no formato autor/nome')
       return
     }
 
     try {
-      const response = await api.get<Repository>(`repos/${newRepo}`)
+      const response = await api.get<Repository>(`repos/${repoSearch}`)
 
       const newRepository = response.data
 
       setRepositories((oldRepositories) => [...oldRepositories, newRepository])
-      setNewRepo('')
+      setRepoSearch('')
       setInputError('')
     } catch (error) {
       setInputError('Erro na busca pelo repositório informado')
@@ -55,8 +78,8 @@ const Dashboard: React.FC = () => {
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           placeholder="Digite o nome do repositório"
-          value={newRepo}
-          onChange={(e) => setNewRepo(e.target.value)}
+          value={repoSearch}
+          onChange={(e) => setRepoSearch(e.target.value)}
         />
         <button type="submit">Pesquisar</button>
       </Form>
